@@ -1,0 +1,14 @@
+{
+  "name": "working-with-apis",
+  "version": "1.0.0",
+  "description": "[TOP Lesson](https://www.theodinproject.com/lessons/node-path-javascript-working-with-apis)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.1.4"
+  }
+}

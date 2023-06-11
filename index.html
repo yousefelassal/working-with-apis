@@ -6,5 +6,15 @@
     <title>Working with APIs</title>
 </head>
 <body>
+    <img src="#" alt="gif">
+    <script>
+        require('dotenv').config();
+        const API_KEY = process.env.API_KEY;
+        const img = document.querySelector('img');
+        fetch(`https://api.giphy.com/v1/gifs/translate?api_key=${API_KEY}&s=cats`, {mode: 'cors'})
+            .then(function(response) {
+                console.log(response.json());
+            })
+    </script>
 </body>
 </html>
