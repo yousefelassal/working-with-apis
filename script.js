@@ -12,12 +12,14 @@ async function getGiphy() {
 getGiphy();
 
 button.addEventListener('click', () => {
+    img.src = '';
     getGiphy();
 });
 
 
 search.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
+        img.src = '';
         fetch(`https://api.giphy.com/v1/gifs/translate?api_key=0m9yqmprOR9tjDYccGrRF8ioYlVBmD0f&s=${search.value}`, {mode: 'cors'})
         .then(function(response) {
             return response.json();
