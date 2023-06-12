@@ -4,13 +4,9 @@ const search = document.querySelector('input');
 
 
 async function getGiphy() {
-    fetch(`https://api.giphy.com/v1/gifs/translate?api_key=0m9yqmprOR9tjDYccGrRF8ioYlVBmD0f&s=cats`, {mode: 'cors'})
-        .then(function(response) {
-            return response.json();
-        })
-        .then(function(response) {
-            img.src = response.data.images.original.url;
-        });
+    const response = await fetch(`https://api.giphy.com/v1/gifs/translate?api_key=0m9yqmprOR9tjDYccGrRF8ioYlVBmD0f&s=cats`, {mode: 'cors'})
+    const catData = await response.json();    
+    img.src = catData.data.images.original.url;
 };
 
 getGiphy();
